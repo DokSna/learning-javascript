@@ -58,7 +58,23 @@
     // ваш код
     for (let i = 0; i < table.rows.length; i++) {
       let row = table.rows[i];
-      row.cells[i].style.backgroundColor = 'grey';
+      // row.cells[i].style.backgroundColor = 'grey';
+      // если строка не чётная, будем выделять нечётные ячейки и наоборот
+      if (i % 2 == 0) {
+        for (let j = 0; j < row.cells.length; j++) {
+          if (j % 2 == 0) {
+            row.cells[j].style.backgroundColor = 'grey';
+          }
+          else continue;
+        }
+      }
+      else {
+        for (let j = 0; j < row.cells.length; j++) {
+          if (j % 2 != 0) {
+            row.cells[j].style.backgroundColor = 'grey';
+          }
+        }
+      }
     }
   </script>
 </body>
