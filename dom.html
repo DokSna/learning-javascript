@@ -1,9 +1,73 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Изучаем DOM</title>
+  <script src="dom.js"></script>
+  <style>
+    .quadre {
+      height: 300px;
+      width: 300px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
 <body>
-  <div>Пользователи:</div>
-  <ul>
-    <li>Джон</li>
-    <li>Пит</li>
-  </ul>
+  <button onclick="fun(this)">Нажми на меня</button>
+  <input type="text" value="???">
+  <br>
+  <br>
+  <button onclick="funid()">Нажми на меня</button>
+  <input type="text" id="in" value="???">
+  <p>
+    <button onclick="ho()">Нажми на меня</button>
+    <input type="text" id="hi" value="Привет">
+  </p>
+  <!-- возведём в квадрат содержимое инпута -->
+  <p>
+    <button onclick="quadre(this)">Возведение в квадрат</button>
+    <input type="text" placeholder="Введи число">
+  </p>
+  <!-- обмен содержимым между инпутами -->
+  <p>
+    <button onclick="obmen()">Нажми на меня</button>
+    <input type="text" id="in1" value="one">
+    <input type="text" id="in2" value="two">
+  </p>
+  <!-- при нажатии по кнопке - меняется надпись на ней -->
+  <p>
+    <input type="button" value="Нажми на меня" onclick="pis(this)">
+  </p>
+  <!-- меняем цвет текста в инпуте -->
+  <button onclick="funColor(this)">Изменить цвет текста</button>
+  <input type="text" value="Какой-то текст!">
+  <!-- Блокируем и Разблокируем Инпут -->
+  <p>
+    <button onclick="funBlock()">Заблокировать</button>
+    <button onclick="funNoBlock()">Отблокировать</button>
+    <input type="text" id="inBlock" value="Какой-то текст!">
+  </p>
+  <!-- При наведении на кнопку - появляется надпись -->
+  <button onmouseover="alert('Привет')">Наведи на меня курсор</button>
+  <!-- При двойном щелчке на кнопку - появляется надпись -->
+  <button ondblclick="alert('Привет')">Щёлкни 2 раза</button>
+  <!-- Появление надписи при уходе курсора из области -->
+  <div class="quadre" onmouseout="alert('Hello')">Наведи на меня мышь, а потом убери</div>
+
+  <div>
+    <img onmouseout="monkey(this.nextElementSibling)" src="http://old.code.mu/exercises/javascript/dom/osnovy-raboty-s-dom-v-javascript/2/3/1.jpg" alt="">
+    <button onmouseout="monkey(this)">Нажми</button>
+
+  </div>
+<!-- при нажатии на кнопку меняется текст с ней -->
+<p>
+  <input type="button" onclick="blo(this)" value="one">
+</p>
+
+<!-- 12. -->
 </body>
+
 </html>
