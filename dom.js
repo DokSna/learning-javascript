@@ -40,3 +40,43 @@ function monkey(it) {
 function blo(j) {
   j.value = "two";
 }
+
+function typeRef(i) {
+  i.value = "Теперь не нажать";
+  i.disabled = true;
+}
+function noRef(o) {
+  o.value = "Нажми на меня!"
+  o.disabled = false;
+}
+
+function Monkey1(m) {
+  m.src = "/img/2monkey.bmp"
+}
+function Monkey2(m) {
+  m.src = "/img/1monkey.bmp"
+}
+
+function  disp(b) {
+  let show = document.getElementById('di');
+  if (b) {
+    show.style.display = "inline-block";
+  }
+  else {
+    show.style.display = "none";
+  }
+}
+
+function calc(but) {
+  but.value = Number(but.value) + 1;
+}
+
+function gen(ob){
+  let num = Math.random();
+  ob.value = num;
+  console.log(num);
+}
+
+function mc(element) {
+  element.value = element.className;
+}

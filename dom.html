@@ -12,6 +12,17 @@
       width: 300px;
       border: 1px solid red;
     }
+
+    .type_rev {
+      width: 300px;
+    }
+    .monkey {
+      width: 150px;
+    }
+    .random {
+      width: 300px;
+      cursor: not-allowed;
+    }
   </style>
 </head>
 
@@ -58,16 +69,41 @@
   <div class="quadre" onmouseout="alert('Hello')">Наведи на меня мышь, а потом убери</div>
 
   <div>
-    <img onmouseout="monkey(this.nextElementSibling)" src="http://old.code.mu/exercises/javascript/dom/osnovy-raboty-s-dom-v-javascript/2/3/1.jpg" alt="">
-    <button onmouseout="monkey(this)">Нажми</button>
+    <img onmouseout="monkey(this.nextElementSibling)"
+      src="http://old.code.mu/exercises/javascript/dom/osnovy-raboty-s-dom-v-javascript/2/3/1.jpg" alt="">
+    <button onmouseover="monkey(this)">Нажми</button>
 
   </div>
-<!-- при нажатии на кнопку меняется текст с ней -->
-<p>
-  <input type="button" onclick="blo(this)" value="one">
-</p>
+  <!-- при нажатии на кнопку меняется текст с ней -->
+  <p>
+    <input type="button" onclick="blo(this)" value="one">
+  </p>
 
-<!-- 12. -->
+  <!-- 12. кнопка меняется на поле ввода -->
+  <p>
+    <input type="submit" class="type_rev" value="Нажми на меня!" onmouseout="noRef(this)" onmouseover="typeRef(this)" onclick="alert('Победа!')">
+  </p>
+  <div>
+    <img class="monkey" src="/img/1monkey.bmp" alt="обезьяны" onmouseover="Monkey1(this)" onmouseout="Monkey2(this)">
+  </div>
+<!-- скрыть / показать элемент -->
+  <div>
+    <input id="di" type="text" value="Ку-ку!">
+    <button onclick="disp(0)">Скрыть</button>
+    <button onclick="disp(1)">Показать</button>
+  </div>
+  <!-- Кнопка считает кол-во нажатий по ней.  -->
+  <p>
+    <input type="button" value="0" onclick="calc(this)" >
+  </p>
+  <!-- генерируем случайные числа в консоль -->
+  <p>
+    <input type="button" value="сгенерируй число" class="random" onclick="gen(this)">
+  </p>
+  <!-- покажем css классы элемента -->
+  <p>
+    <input type="text" class="eee www ddd" value="Hello" onmouseover="mc(this)">
+  </p>
 </body>
 
 </html>
