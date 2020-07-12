@@ -16,17 +16,42 @@
     .type_rev {
       width: 300px;
     }
+
     .monkey {
       width: 150px;
     }
+
     .random {
       width: 300px;
       cursor: not-allowed;
     }
+
   </style>
 </head>
 
 <body>
+  <!-- Метод getElementsByTagName -->
+  <!-- -------------------------------- -->
+  <input type="text" value="0" id="input1">
+	+
+	<input type="text" value="0" id="input2">
+	=
+  <span id = "result">?</span>
+  <input type="text" readonly value="0" id="summka">
+	<br>
+	<br>
+  <button onclick="go()">Нажмите чтобы сложить</button>
+  <br><br>
+  <!-- <form name = "calc"> -->
+    <input type="text" id="a">
+    <span> + </span>
+    <input type="text" id="b">
+    <span> = </span><span id="sum">?</span>
+    <br>
+    <br>
+    <button onclick="calco()">Нажмите чтобы сложить</button>
+  <!-- </form> -->
+  <br><br>
   <button onclick="fun(this)">Нажми на меня</button>
   <input type="text" value="???">
   <br>
@@ -81,12 +106,13 @@
 
   <!-- 12. кнопка меняется на поле ввода -->
   <p>
-    <input type="submit" class="type_rev" value="Нажми на меня!" onmouseout="noRef(this)" onmouseover="typeRef(this)" onclick="alert('Победа!')">
+    <input type="submit" class="type_rev" value="Нажми на меня!" onmouseout="noRef(this)" onmouseover="typeRef(this)"
+      onclick="alert('Победа!')">
   </p>
   <div>
     <img class="monkey" src="/img/1monkey.bmp" alt="обезьяны" onmouseover="Monkey1(this)" onmouseout="Monkey2(this)">
   </div>
-<!-- скрыть / показать элемент -->
+  <!-- скрыть / показать элемент -->
   <div>
     <input id="di" type="text" value="Ку-ку!">
     <button onclick="disp(0)">Скрыть</button>
@@ -94,7 +120,7 @@
   </div>
   <!-- Кнопка считает кол-во нажатий по ней.  -->
   <p>
-    <input type="button" value="0" onclick="calc(this)" >
+    <input type="button" value="0" onclick="calc(this)">
   </p>
   <!-- генерируем случайные числа в консоль -->
   <p>
@@ -104,6 +130,54 @@
   <p>
     <input type="text" class="eee www ddd" value="Hello" onmouseover="mc(this)">
   </p>
+  <h2>Задачи на работу с элементами страницы в JavaScript</h2>
+  <button onclick="sp()">Нажми на меня</button>
+  <span>Начальный текст</span>
+  <!-- Задача 2. Замена span на тег b без изменения текста -->
+  <button onclick="bold()">Нажми на меня</button>
+  <span id="bld">Это span с текстом</span>
+
+  <!-- Задача 3. На getElementsByTagName -->
+  <div onclick="go(this)">
+    <h2>Заголовок не поменяется</h2>
+    <p>Абзац, поменяется</p>
+    <p>Абзац, поменяется</p>
+    <p>Абзац, поменяется</p>
+  </div>
+  <!-- Задача 4. На getElementsByClassName -->
+  <h2 class="zzz">Заголовок с классом zzz.</h2>
+  <p class="zzz">Абзац с классом zzz.</p>
+  <p class="zzz">Абзац с классом zzz.</p>
+  <p>Просто абзац, не поменяется.</p>
+  <button onclick="clName()">Go</button>
+  <!-- Задача 5. На querySelectorAll -->
+  <h2 class="zzzp">Заголовок с классом zzz, не поменяется.</h2>
+  <p class="zzzp">Абзац с классом zzz.</p>
+  <p class="zzzp">Абзац с классом zzz.</p>
+  <p>Просто абзац, не поменяется.</p>
+  <button onclick="go2()">go</button>
+  <br>
+  <!-- Задача 1 -->
+  <p>При нажатии на кнопку текст в абзаце поменяется.</p>
+  <button onclick="fun1ho(this)">Нажми на меня!</button>
+  <!-- 2 -->
+  <p>При нажатии на кнопку текст в абзаце поменяется.</p>
+  <button onclick="go2(this)">Нажмите на меня</button>
+  <!-- 3 -->
+  <p>При нажатии на кнопку абзац станет h3, но текст останется.</p>
+  <button onclick="go3(this)">p go h3</button>
+  <br>
+  <br>
+  <!-- 4 calc -->
+  <form name = "calck">
+    <input type="text" name="a">
+    <span> + </span>
+    <input type="text" name="b" id="">
+    <span> = </span><span class="sum">?</span>
+    <br>
+    <br>
+    <button onclick="calco()">Нажмите чтобы сложить</button>
+  </form>
 </body>
 
 </html>

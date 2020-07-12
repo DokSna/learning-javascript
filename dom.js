@@ -80,3 +80,75 @@ function gen(ob){
 function mc(element) {
   element.value = element.className;
 }
+
+function sp() {
+  let sp = document.querySelector('span');
+  sp.innerHTML = "!!!";
+}
+
+function bold() {
+  let sp = document.getElementById('bld');
+  sp.outerHTML = '<b>' + sp.innerHTML + '</b>';
+}
+
+// function go(it) {
+//   let ps = it.getElementsByTagName('p');
+//   for (i=0; i < ps.length; ++i) {
+//     ps[i].innerHTML = i+1;
+//   }
+// }
+
+function clName() {
+  let collection = document.getElementsByClassName('zzz');
+  for (i = 0; i < collection.length; i++) {
+    collection[i].innerHTML = i +1;
+  }
+}
+
+function go2() {
+  let pz = document.querySelectorAll('p.zzzp');
+  for (i = 0; i < pz.length; i++) {
+    pz[i].innerHTML = i + 1;
+  }
+}
+
+function fun1ho(jo) {
+  let po = jo.previousElementSibling;
+  po.innerHTML = "Ку-ку! А я <b>жирный!</b>"
+}
+
+function go2(th) {
+  let text = th.previousElementSibling;
+  text.outerHTML = '<h3>' + 'Абзац превратился в h3!' + '</h3>';
+}
+
+function go3(t) {
+  let text = t.previousElementSibling;
+  text.outerHTML = '<h3>' + text.innerHTML + '</h3>';
+}
+
+function calco() {
+  // let forma = document.calc;
+  // let a = forma.a.value;
+  // let b = forma.b.value;
+  // let summa = forma.getElementsByClassName('sum');
+  // summa[0].innerHTML = Number(a) + Number(b);
+  let a = +document.getElementById('a').value;
+  let b = +document.getElementById('b').value;
+  let summa = document.getElementById('sum');
+  summa.innerHTML = a + b;
+}
+//+ здесь самый удобный вариант - так как числа могут быть как int так и float.
+function go(){
+  var input1 = +document.getElementById('input1').value;
+  var input2 = +document.getElementById('input2').value;
+  var result = document.getElementById('result');
+  let summ = document.getElementById('summka');
+  result.innerHTML = input1 + input2;
+  summ.value = input1 + input2;
+}
+
+let n = prompt("Введите число", [0]);
+n = Math.abs(n) % 100; var n1 = n % 10;
+console.log(n);
+console.log(n1);
